@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Colors</title>
+    <script>
+        function changeColor(event){
+            event.preventDefault();
+
+            const colorInput = document.querySelector('#color').value;
+            const header = document.querySelector('#hello');
+            header.style.color = colorInput;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('#submit').onclick = changeColor;
+        }
+        );
+    </script>
+</head>
+<body>
+    <h1 id="hello">Hello</h1>
+    <form id="colorForm">
+        <input type="text" id="color" placeholder="Enter a color">
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
